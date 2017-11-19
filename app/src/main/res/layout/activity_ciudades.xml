@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pc_gaming.madridcontaminacion.ListaCiudades">
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:text="MUNICIPIOS DE LA COMUNIDAD DE MADRID"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_above="@+id/tvInfo"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView9"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/co2"
+        android:layout_alignStart="@+id/co2"
+        android:text="Información de Contaminación Media:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/co2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dioxidoAzufre"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        app:srcCompat="@mipmap/co2" />
+
+    <ImageView
+        android:id="@+id/dioxidoAzufre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/co2"
+        android:layout_marginBottom="11dp"
+        app:srcCompat="@mipmap/dioxidoazufre" />
+
+    <ImageView
+        android:id="@+id/dioxidoNitrogeno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvInfo"
+        android:layout_marginStart="27dp"
+        android:layout_toEndOf="@+id/tvUnidadCo2"
+        app:srcCompat="@mipmap/dioxidonitrogeno" />
+
+    <ImageView
+        android:id="@+id/monoxidoNitrogeno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dioxidoNitrogeno"
+        android:layout_below="@+id/dioxidoNitrogeno"
+        app:srcCompat="@mipmap/monoxidonitrogeno" />
+
+    <TextView
+        android:id="@+id/tvDatoCo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dioxidoAzufre"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/co2"
+        android:text="0.8 " />
+
+    <TextView
+        android:id="@+id/tvDatoSO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvDatoCo"
+        android:layout_below="@+id/tvDatoCo"
+        android:layout_marginTop="13dp"
+        android:text="0.9" />
+
+    <TextView
+        android:id="@+id/tvDatoNO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvUnidadCo2"
+        android:layout_alignBottom="@+id/tvUnidadCo2"
+        android:layout_alignStart="@+id/tvDatoNO"
+        android:text="0.2" />
+
+    <TextView
+        android:id="@+id/tvDatoNO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvUnidadSo2"
+        android:layout_alignBottom="@+id/tvUnidadSo2"
+        android:layout_toStartOf="@+id/tvUnidadNO"
+        android:text="0.5" />
+
+    <TextView
+        android:id="@+id/tvUnidadCo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvDatoCo"
+        android:layout_toEndOf="@+id/tvDatoCo"
+        android:text="  mg/m³" />
+
+    <TextView
+        android:id="@+id/tvUnidadSo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDatoSO2"
+        android:layout_alignBottom="@+id/tvDatoSO2"
+        android:layout_toEndOf="@+id/tvDatoSO2"
+        android:text="  ug/m³" />
+
+    <TextView
+        android:id="@+id/tvUnidadNo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvDatoNO2"
+        android:layout_toEndOf="@+id/tvDatoNO2"
+        android:text="  mg/m³" />
+
+    <TextView
+        android:id="@+id/tvUnidadNO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDatoNO"
+        android:layout_alignBottom="@+id/tvDatoNO"
+        android:layout_alignEnd="@+id/tvInfo"
+        android:text="  mg/m³" />
+
+
+</RelativeLayout>
